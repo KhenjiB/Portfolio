@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marq Kenjie Buenconsejo | IT Student & Aspiring Software Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Marq Kenjie Aceron Buenconsejo, a BS Information Technology student at STI College Legazpi building web applications with React, Tailwind CSS, PHP, C#, Java, and MySQL."
+    />
+    <meta name="author" content="Marq Kenjie Aceron Buenconsejo" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Marq Kenjie Buenconsejo | Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="IT student and aspiring software developer. Projects, skills, and contact information."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Apply the saved theme before React loads to avoid a flash. Dark is the default.
+      try {
+        if (localStorage.getItem('theme') === 'light') {
+          document.documentElement.classList.remove('dark')
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
