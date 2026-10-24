@@ -16,7 +16,7 @@ export default function About() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading id="about-title" index="01" eyebrow="About me" title="Building software that people actually enjoy using." />
 
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-16">
           <Reveal className="space-y-5 text-base leading-relaxed sm:text-lg">
             <p>
               I'm <span className="font-medium text-slate-900 dark:text-white">{profile.fullName}</span>, a BS
@@ -39,7 +39,7 @@ export default function About() {
             </p>
           </Reveal>
 
-          <ul className="grid gap-4 sm:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {highlights.map(({ icon: Icon, title, text }, i) => (
               <Reveal
                 as="li"

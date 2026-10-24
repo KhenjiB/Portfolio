@@ -10,7 +10,7 @@ export const profile = {
   lastName: 'Buenconsejo',
   fullName: 'Marq Kenjie Aceron Buenconsejo',
   shortName: 'Marq Buenconsejo',
-  initials: 'MK',
+  initials: 'JIE',
   title: 'IT Student | Aspiring Software Developer',
   heroTitle: 'Aspiring Software Developer',
   intro:

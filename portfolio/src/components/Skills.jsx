@@ -18,7 +18,7 @@ export default function Skills() {
           description="Grouped by where they sit in an application, from what the user sees to where the data lives."
         />
 
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {skillGroups.map(({ title, icon: Icon, description, skills }, i) => (
             <Reveal
               key={title}

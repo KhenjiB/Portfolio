@@ -152,12 +152,12 @@ export default function Contact() {
           description="Recruiters, clients, and fellow developers: whether it's an internship, a project idea, or just a question about my work, I'd love to hear from you."
         />
 
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-14">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-14">
           <Reveal>
             <ul className="space-y-2">
               <ContactRow icon={Mail} label="Email" value={profile.email || 'your.email@example.com (add in profile.js)'} href={profile.email ? `mailto:${profile.email}` : ''} />
-              <ContactRow icon={Github} label="GitHub" value={profile.github ? profile.github.replace(/^https?:\/\//, '') : 'GitHub link coming soon'} href={profile.github} />
-              <ContactRow icon={Linkedin} label="LinkedIn" value={profile.linkedin ? profile.linkedin.replace(/^https?:\/\/(www\.)?/, '') : 'LinkedIn link coming soon'} href={profile.linkedin} />
+              <ContactRow icon={Github} label="GitHub" value={profile.github ? profile.github.replace(/^https?:\/\//, '').replace(/[?#].*$/, '').replace(/\/$/, '') : 'GitHub link coming soon'} href={profile.github} />
+              <ContactRow icon={Linkedin} label="LinkedIn" value={profile.linkedin ? profile.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/[?#].*$/, '').replace(/\/$/, '') : 'LinkedIn link coming soon'} href={profile.linkedin} />
             </ul>
             <p className="mt-8 rounded-xl border border-slate-200 p-5 text-sm leading-relaxed dark:border-white/8">
               <span className="font-semibold text-slate-900 dark:text-white">Currently:</span> {profile.availability.toLowerCase()}, and happy to talk about small freelance projects.
@@ -170,7 +170,7 @@ export default function Contact() {
               onSubmit={onSubmit}
               className="space-y-5 rounded-2xl border border-slate-200 bg-slate-50/80 p-6 backdrop-blur sm:p-8 dark:border-white/8 dark:bg-ink-900/80"
             >
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <Field id="name" label="Name" autoComplete="name" placeholder="Juan Dela Cruz" value={values.name} onChange={onChange} error={errors.name} />
                 <Field id="email" label="Email" type="email" autoComplete="email" placeholder="you@example.com" value={values.email} onChange={onChange} error={errors.email} />
               </div>

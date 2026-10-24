@@ -31,7 +31,7 @@ export default function Education() {
                 <p className="mt-4 max-w-3xl leading-relaxed">{item.description}</p>
 
                 <h4 className="mt-7 text-sm font-semibold">Relevant projects &amp; learning</h4>
-                <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
+                <ul className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                   {item.highlights.map((h) => (
                     <li key={h} className="flex items-start gap-2.5 text-sm">
                       <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-cyan-500" />

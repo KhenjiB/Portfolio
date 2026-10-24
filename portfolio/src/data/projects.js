@@ -11,7 +11,7 @@
 export const projects = [
   {
     id: 'school-portal',
-    title: 'Web-Based School Management Portal',
+    title: 'Malilipot Central School Portal',
     category: 'Web App',
     description:
       'A centralized school management platform designed to help manage academic, administrative, and communication processes.',
@@ -21,7 +21,7 @@ export const projects = [
     tech: ['React', 'TailwindCSS', 'TypeScript', 'Supabase', 'PostreSQL'],
     image: '/projects/Malilipot.png',
     repo: '',
-    demo: '',
+    demo: 'https://malilipot-central-school.vercel.app/',
     accent: 'from-cyan-400 to-blue-600',
   },
   {

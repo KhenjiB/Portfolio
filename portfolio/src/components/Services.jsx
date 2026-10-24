@@ -22,7 +22,7 @@ export default function Services() {
           title="How I can help."
           description="The kinds of work I'm ready to take on, for internships, entry-level roles, or small freelance projects."
         />
-        <ul className="grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3 dark:border-white/8 dark:bg-white/8">
+        <ul className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-3 dark:border-white/8 dark:bg-white/8">
           {services.map(({ icon: Icon, title, text }, i) => (
             <Reveal
               as="li"
