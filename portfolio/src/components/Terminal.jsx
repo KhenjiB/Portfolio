@@ -105,6 +105,7 @@ function run(raw) {
         ['email', profile.email],
         ['github', profile.github],
         ['linkedin', profile.linkedin],
+        ...(profile.facebook ? [['facebook', profile.facebook]] : []),
       ]
       return rows.map(([k, v]) => (
         <Line key={k}>

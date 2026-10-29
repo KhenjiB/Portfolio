@@ -24,6 +24,7 @@ export const profile = {
   email: 'marqkenjieaceronpo@gmail.com', 
   github: 'https://github.com/KhenjiB', 
   linkedin: 'https://www.linkedin.com/in/mkbuenconsejo14/?isSelfProfile=true', 
+  facebook: 'https://www.facebook.com/marqkenjie.aceron',
 
   // Resume: put your PDF in /public (e.g. public/resume.pdf) and set the path.
   resume: '', // e.g. '/resume.pdf'

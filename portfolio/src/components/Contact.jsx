@@ -3,6 +3,7 @@ import { Mail, Github, Linkedin, Send, CheckCircle2, AlertCircle, Info, Loader2 
 import SectionHeading from './SectionHeading'
 import Reveal from './Reveal'
 import { profile } from '../data/profile'
+import { Facebook } from './links'
 
 const emptyForm = { name: '', email: '', subject: '', message: '' }
 
@@ -158,6 +159,9 @@ export default function Contact() {
               <ContactRow icon={Mail} label="Email" value={profile.email || 'your.email@example.com (add in profile.js)'} href={profile.email ? `mailto:${profile.email}` : ''} />
               <ContactRow icon={Github} label="GitHub" value={profile.github ? profile.github.replace(/^https?:\/\//, '').replace(/[?#].*$/, '').replace(/\/$/, '') : 'GitHub link coming soon'} href={profile.github} />
               <ContactRow icon={Linkedin} label="LinkedIn" value={profile.linkedin ? profile.linkedin.replace(/^https?:\/\/(www\.)?/, '').replace(/[?#].*$/, '').replace(/\/$/, '') : 'LinkedIn link coming soon'} href={profile.linkedin} />
+              {profile.facebook && (
+                <ContactRow icon={Facebook} label="Facebook" value={profile.facebook.replace(/^https?:\/\/(www\.|m\.)?/, '').replace(/[?#].*$/, '').replace(/\/$/, '')} href={profile.facebook} />
+              )}
             </ul>
             <p className="mt-8 rounded-xl border border-slate-200 p-5 text-sm leading-relaxed dark:border-white/8">
               <span className="font-semibold text-slate-900 dark:text-white">Currently:</span> {profile.availability.toLowerCase()}, and happy to talk about small freelance projects.

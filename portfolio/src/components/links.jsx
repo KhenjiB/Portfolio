@@ -3,11 +3,35 @@ import { profile } from '../data/profile'
 
 // Shared helpers so every button handles "not set yet" the same way.
 
+// Facebook logo drawn to match the Lucide icon style (same size/className props).
+export function Facebook({ size = 24, className = '', ...props }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  )
+}
+
+// `optional: true` means the button is hidden completely until a link is added.
 export const socials = [
   { label: 'GitHub', href: profile.github, icon: Github },
   { label: 'LinkedIn', href: profile.linkedin, icon: Linkedin },
+  { label: 'Facebook', href: profile.facebook, icon: Facebook, optional: true },
   { label: 'Email', href: profile.email ? `mailto:${profile.email}` : '', icon: Mail },
-]
+].filter((s) => s.href || !s.optional)
 
 export function SocialIcons({ className = '', size = 18 }) {
   return (
